@@ -1,0 +1,134 @@
+import numpy
+
+### PART A ###
+
+n = numpy.random.poisson(120)
+
+pointList = []
+
+for i in range(0,n):
+  x = numpy.random.uniform(-1,1)
+  y =  numpy.random.uniform(-1,1)
+  pointList.append([x,y])
+  
+print("Part A:")  
+print("")
+  
+for i in pointList:
+  print(i[0], ", ", i[1])
+print("")
+
+### PART B ###
+
+n = numpy.random.poisson(120)
+
+pointList = []
+
+for i in range(0,n):
+  radius = numpy.random.uniform(0,1)
+  angle = numpy.random.uniform(0,2*numpy.pi)
+  pointList.append([radius*numpy.cos(angle), radius*numpy.sin(angle)])
+  
+print("Part B:")
+print("")
+  
+for i in pointList:
+  print(i[0], ", ", i[1])
+print("")
+  
+### PART C ###
+
+n = numpy.random.poisson(480)
+print(n)
+
+pointList = []
+
+for i in range(0,n):
+  x = numpy.random.uniform(-2,2)
+  y =  numpy.random.uniform(-2,2)
+  pointList.append((x**2 + y**2)**.5)
+
+pointList.sort()
+  
+print("Part C:")  
+print("")
+  
+for x in range(0,100):
+  lowest = 0 
+  for i in pointList:
+    if(i <= x/35):
+      lowest += 1
+  print(x/35, ", ", lowest/len(pointList))
+  
+print("")
+  
+### PART D ###
+
+low1List = []
+low2List = []
+low3List = []
+low4List = []
+
+for i in range(0,100):
+  n = numpy.random.poisson(480)
+  pointList = []
+
+  for j in range(0,n):
+    x = numpy.random.uniform(-2,2)
+    y =  numpy.random.uniform(-2,2)
+    pointList.append((x**2 + y**2)**.5)
+  
+  pointList.sort()
+  low1List.append(pointList[0])
+  low2List.append(pointList[1])
+  low3List.append(pointList[2])
+  low4List.append(pointList[3])
+  
+print("Part D:")
+print("")
+print("G_1:")
+print("")
+    
+for x in range(0,100):
+  s_1 = 0 
+  for i in low1List:
+    if(i > x/300):
+      s_1 += 1 
+  print(x/300, ", ", s_1/100)
+  
+print("")
+print("G_2:")
+print("")
+
+for x in range(0,100):
+  s_1 = 0 
+  for i in low2List:
+    if(i > x/300):
+      s_1 += 1 
+  print(x/300, ", ", s_1/100) 
+  
+print("")
+print("G_3:")
+print("")
+
+for x in range(0,100):
+  s_1 = 0 
+  for i in low3List:
+    if(i > x/300):
+      s_1 += 1 
+  print(x/300, ", ", s_1/100) 
+  
+print("")
+print("G_4:")
+print("")
+
+for x in range(0,100):
+  s_1 = 0 
+  for i in low4List:
+    if(i > x/300):
+      s_1 += 1 
+  print(x/300, ", ", s_1/100)
+  
+  
+
+  
