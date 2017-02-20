@@ -1,0 +1,48 @@
+import numpy;
+
+x_1 = numpy.random.exponential()
+x_2 = numpy.random.exponential()
+x_3 = numpy.random.exponential()
+xList = [x_1, x_2, x_3]
+
+print("Our three random exponential values are ", x_1, ", ", x_2, ", and ", x_3, ".")
+print("")
+print("The largest is ", max(xList), ".")
+
+ascending = 0
+est_1 = 0
+est_2 = 0
+est_3 = 0
+est_4 = 0
+condition = 0 
+
+for i in range(0,1000):
+  
+  if(x_1 < x_2 < x_3):
+    
+    ascending += 1
+    est_3 += max(xList)
+    est_4 += min(xList)
+    
+  if(x_1 < x_2):
+    
+    condition += 1
+    est_1 += min(xList)
+    est_2 += max(xList)
+    
+  x_1 = numpy.random.exponential()
+  x_2 = numpy.random.exponential()
+  x_3 = numpy.random.exponential()
+  xList = [x_1, x_2, x_3]
+
+
+print("")
+print("In our simulation, the probability the three variables were in ascending order was ", ascending/1000, ".")
+print("")
+print("Given X_1 and X_2 were in order, the expected minimum value was ", est_1/condition, ".")
+print("")
+print("Given X_1 and X_2 were in order, the expected maximum value was ", est_2/condition, ".")
+print("")
+print("Given all variables were in order, the expected maximum value was ", est_3/ascending, ".")
+print("")
+print("Given all variables were in order, the expected minimum value was ", est_4/ascending, ".")
