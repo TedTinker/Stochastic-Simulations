@@ -1,3 +1,11 @@
+# (a) Simulate a sample path of non-homogeneous Poisson process whose mean
+# value function is given by m(t) = 4 log(1 + t) , 0 <= t <= 10 .
+# (b) Repeat (a) 10000 times to estimate E[T1] and Var(T1) , where T1 is the first event time.
+# (c) Simulate a sample path of non-homogeneous Poisson process whose mean
+# value function is given by m(t) = t2 + 2t , 0 <= t <= 10 .
+# (d) Repeat (c) sufficiently many times and obtain a good estimate of the probability
+# that exactly 5 events occur between time t = 4 and time t = 5 . (cf. (6))
+
 import numpy
 
 ### Part A ###
