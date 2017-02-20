@@ -1,4 +1,15 @@
+# (a) [10 points] Simulate n = 3 independent exponential random variables X1;X2;X3 with
+# common mean 1 using function numpy.random.exponential, and find the maximum max1 <= i <= 3 Xi ;
+# (b) [2 points each] repeat this simulation 1000 times to estimate by Monte Carlo Simulation
+# P(X1 < X2 < X3) ,
+# E[min1<=i<=3 XijX1 < X2] ,
+# E[max1<=i<=3 Xi|X1 < X2] ,
+# E[max1<=i<=3 Xi|X1 < X2 < X3]
+# and E[min1<=i<=3 Xi|X1 < X2 < X3]
+
 import numpy;
+
+### Part A ###
 
 x_1 = numpy.random.exponential()
 x_2 = numpy.random.exponential()
@@ -8,6 +19,8 @@ xList = [x_1, x_2, x_3]
 print("Our three random exponential values are ", x_1, ", ", x_2, ", and ", x_3, ".")
 print("")
 print("The largest is ", max(xList), ".")
+
+### Part B ###
 
 ascending = 0
 est_1 = 0
