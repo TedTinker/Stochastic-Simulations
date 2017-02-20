@@ -1,3 +1,18 @@
+# In this exercise we shall simulate the two-dimensional Poisson process (Poisson Point Process
+# in the plane and its subsets such as a square and a disc).
+# (a) In the setup of the above Problem (1) simulate the two-dimensional Poisson process in the
+# rectangle region [-1, 1] x [-1, 1] . Choose Lambda appropriately.
+# (b) Simulate the two-dimensional Poisson process in a circular region (disc) of radius 1 and
+# of center at the origin (0, 0) .
+# Simulate once again the two-dimensional Poisson process now on the whole plane, and
+# let Ri denote the distance between the origin (0, 0) and its i -th nearest Poisson point for i = 1, 2, . . .
+# (c) Estimate the cumulative distribution function F(x) := P(R1 <= x) of R1 for every
+# 0 <= x <= c1 (cf. section 11.5.2) and plot the function F(.) for 0 <= x <- c1 , where c1 is
+# chosen large enough to represent the whole shape of the function F(.) .
+# (d) Estimate the tail probability Gn(x) := P(Rn > x) for x > 0 , 0 <= x <= c2 , where c2 is
+# chosen large enough to represent the whole shape of function Gn(.) for n = 1, 2, 3, 4 . Plot
+# the function Gn(.) for n = 1, 2, 3, 4 in the same graph.
+
 import numpy
 
 ### PART A ###
