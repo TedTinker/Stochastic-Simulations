@@ -1,3 +1,12 @@
+# (a) Generate a sample path of Poisson process {N(t), t >= 0} with intensity 10 .
+# Plot the sample path of N(.) for the time interval [0; 10] .
+# (b) Generate another random variable T of Pareto distribution with scale parameter 1/3
+# and shape parameter 3 , i.e., its probability density function given by
+# f(x) = 1 / 9x^4 ; x >= 1/3 ;
+# independently of the Poisson process {N(t), t >= 0}. Then find the value of N(T) .
+# (c) Repeat this procedure in (b) 10000 times and estimate Cov(T;,N(T)) and Var(N(T)) (cf. (6)).
+# (d) Estimate the standard error of each (Monte Carlo) estimate in (c). (Recall the definition of standard error).
+
 import numpy
 import random
 import statistics
