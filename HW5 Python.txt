@@ -1,0 +1,59 @@
+import numpy 
+
+### Part A ###
+print("Part A:")
+print("")
+UList = [0]
+
+for i in range(1,1024):
+  UList.append(numpy.random.normal(0,1/32))
+  UList[i]+=UList[i-1]
+
+for i in range(0,1024):
+  print(i/(1024), ", ", UList[i])
+  
+print(" ")  
+### Part B ### 
+
+print("Part B:")
+print(" ")
+print(" & .5 & .6 & .7 & .8 & .9 & 1 & 1.1 & 1.2 & 1.3 & 1.4\\\\")
+
+for a in range(-5,5):
+  print(a/10, end = "")
+  for b in range(5,15): 
+    counter = 0
+    for i in range(0,100):
+      UList = [0]
+      for j in range(1,1024):
+        UList.append(numpy.random.normal(0,1/32))
+        UList[j]+=UList[j-1]
+      if(UList[-1] < a/10):
+        if(max(UList) > b/10):
+          counter += 1
+    print("& ", counter/100, end = "")
+  print("\\\\")
+  
+print(" ")
+
+### Part C ### 
+
+print("Part C:")
+print(" ")
+print("x: & P(B(Tau) >= x) \\\\")
+
+for x in range(0,20):
+  print(x/10, end="")
+  counter = 0
+  for i in range(0,500):
+    Tau = numpy.random.randint(0,1023)
+    UList = [0]
+    for j in range(1,1024):
+      UList.append(numpy.random.normal(0,1/32))
+      UList[j]+=UList[j-1]
+    if(UList[Tau] >= x/10):
+      counter += 1 
+  print(" & ", counter/500, "\\\\")
+  
+    
+  
